@@ -63,21 +63,25 @@ def seg_sentence(sentence):
   import numpy as np
   from PIL import Image
   
-  inputs = open('../data/threebody.txt', 'r', encoding='utf-16')  
-  outputs = open('output.txt', 'w')  
+  inputs = open('../data/threebody.txt', 'r', encoding='utf-16')  #我的txt编码是utf-16，一般是utf-8或者gbk
+  outputs = open('output.txt', 'w')  
   for line in inputs:  
       line_seg = seg_sentence(line)  # 这里的返回值是字符串  
-      outputs.write(line_seg + '\n')  
-  outputs.close()  
+      outputs.write(line_seg + '\n')  # 将分词和过滤停词表的文本保存
+  outputs.close()  
   inputs.close()
 
-  mask_img = np.array(Image.open("./resource/mask.jpg"))
-  inputs = open('output.txt', 'r', encoding='utf-8')
+  mask_img = np.array(Image.open("./resource/mask.jpg")) # 此为背景图形，我选用的是水滴图案
+  inputs = open('output.txt', 'r', encoding='utf-8')
   mytext=inputs.read()
-  wordcloud=WordCloud(background_color="white",max_words=500,width=2000, height=1600,                       margin=2,font_path="./resource/simsun.ttf",mask=mask_img).generate(mytext)
-plt.imshow(wordcloud)
-plt.axis("off")
-plt.show()
-  
+   wordcloud=WordCloud(background_color="white",max_words=500,width=2000,height=1600,margin=2,font_path="./resource/simsun.ttf",mask=mask_img).generate(mytext) #生成云图
+  plt.imshow(wordcloud)
+  plt.axis("off")
+  plt.show()
+```
+
+得到的最终结果如下：
+
+![](./resource/result.png)
 
   
