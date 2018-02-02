@@ -20,7 +20,7 @@ def stopwordslist(filepath):
 # 对句子进行分词  
 def seg_sentence(sentence):  
     sentence_seged = jieba.cut(sentence.strip())  
-    stopwords = stopwordslist('stopword.txt')  # 这里加载停用词的路径  
+    stopwords = stopwordslist('./resource/stopword.txt')  # 这里加载停用词的路径  
     outstr = ''  
     for word in sentence_seged:  
         if word not in stopwords:  
@@ -38,10 +38,10 @@ for line in inputs:
 outputs.close()  
 inputs.close()
 
-mask_img = np.array(Image.open("mask.jpg"))
+mask_img = np.array(Image.open("./resource/mask.jpg"))
 inputs = open('output.txt', 'r', encoding='utf-8')
 mytext=inputs.read()
-wordcloud=WordCloud(background_color="white",max_words=500,width=2000, height=1600, margin=2,font_path="simsun.ttf",mask=mask_img).generate(mytext)
+wordcloud=WordCloud(background_color="white",max_words=500,width=2000, height=1600, margin=2,font_path="./resource/simsun.ttf",mask=mask_img).generate(mytext)
 plt.imshow(wordcloud)
 plt.axis("off")
 plt.show()
