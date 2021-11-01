@@ -1,0 +1,3917 @@
+@prefix : <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11> .
+
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R002
+:R002 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T010 ,
+                  :T036 ,
+                  :T065 ;
+      rdfs:range :T002 ,
+                 :T010 ;
+      rdfs:comment "表示身体结构和细胞结构内部的整体与部分关系，如“肝下缘”是“全肝膈面”的组成部分，“细胞浆内桥粒”是“细胞膜”的组成部分。" ;
+      rdfs:label "是…组成部分" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R003
+:R003 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T010 ;
+      rdfs:comment "表示一个临床所见在身体结构上的发生部位，如“肺炎”的发生部位是“肺部”，“镰刀型细胞贫血症”的发生部位是“红细胞”。" ;
+      rdfs:label "发生部位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R004
+:R004 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T036 ;
+      rdfs:comment "表示一个临床所见的特征在器官、组织或细胞水平上的形态学变化，如“心脏脓肿”的形态学改变是“脓肿”。" ;
+      rdfs:label "形态学改变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R005
+:R005 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T068 ;
+      rdfs:comment "表示一个临床所见的发病（起病形式）和发病过程，如“慢性呼吸衰竭急性发作”的临床过程是“慢性病急性发作”。" ;
+      rdfs:label "临床过程" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R006
+:R006 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T028 ;
+      rdfs:comment "表示一个临床所见的严重程度，如“婴儿期和青春期中度急性营养不良”的严重程度是“中度”。" ;
+      rdfs:label "严重程度" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R007
+:R007 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T018 ,
+                  :T065 ;
+      rdfs:range :T001 ,
+                 :T002 ,
+                 :T015 ,
+                 :T068 ;
+      rdfs:comment "表示一个临床所见或操作发生在某个生命周期时间段内或某个操作期间，如“新生儿黄疸”发生于“新生儿时期”期间。" ;
+      rdfs:label "发生于…期间" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R009
+:R009 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ,
+                 :T002 ,
+                 :T015 ;
+      rdfs:comment "表示一种操作后所见发生在某种操作之后，如“胃癌术后”后发于“手术”。" ;
+      rdfs:label "后发于" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R010
+:R010 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ,
+                 :T016 ;
+      rdfs:comment "表示对一个临床所见进行评价时所指的其固有的本质含义，如“肌张力低下”评价对象是“肌张力”，“红细胞沉降率升高”评价对象是“红细胞沉降率测量”。" ;
+      rdfs:label "评价对象" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R011
+:R011 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T016 ,
+                  :T018 ,
+                  :T065 ;
+      rdfs:range :T030 ;
+      rdfs:comment "表示对一个临床所见进行评价后得到的结果，如“排尿正常”评价结果是“正常”。" ;
+      rdfs:label "评价结果" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R012
+:R012 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ,
+                 :T002 ,
+                 :T004 ,
+                 :T005 ,
+                 :T008 ,
+                 :T011 ,
+                 :T013 ,
+                 :T015 ,
+                 :T017 ;
+      rdfs:comment "表示一个临床所见的致病原因，如“硒中毒”的致病原因是“硒”，“阿司匹林过敏症”的致病原因是“阿司匹林”。" ;
+      rdfs:label "致病原因" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R013
+:R013 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T018 ;
+      rdfs:range :T031 ;
+      rdfs:comment "表示在不同疾病中出现的共同存在的机能、代谢和结构变化的过程，如“感染性腹泻”的病理过程是“感染过程”。" ;
+      rdfs:label "病理过程" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R014
+:R014 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T010 ,
+                  :T036 ;
+      rdfs:range :T069 ;
+      rdfs:comment "表示一个身体结构的方位信息，只适用于存在双侧对称的身体结构，如“右肺上叶支气管腔”的方位是“右侧”。" ;
+      rdfs:label "方位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R015
+:R015 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T010 ;
+      rdfs:comment "表示一种操作所作用的身体部位，如“神经牵伸术”操作部位是“神经”。" ;
+      rdfs:label "操作部位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R016
+:R016 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T036 ;
+      rdfs:comment "表示所描述的操作涉及到的形态学变化，如“膀胱外翻修补术”操作形态学改变是“外翻”。" ;
+      rdfs:label "操作形态学改变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R017
+:R017 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ,
+                  :T114 ;
+      rdfs:range :T033 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R018
+:R018 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T033 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R019
+:R019 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ,
+                  :T114 ;
+      rdfs:range :T033 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R020
+:R020 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T004 ,
+                 :T005 ;
+      rdfs:comment "表示操作过程关注的直接作用的物质或药物，如“肱骨移植术”目标物质是“骨移植物”，“白血病化疗药物鞘内注射”目标物质是“化疗药物”。" ;
+      rdfs:label "目标物质" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R021
+:R021 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T004 ,
+                 :T005 ;
+      rdfs:comment "表示操作过程中用于辅助执行操作的相关物质，如“眼眶切开术伴有骨瓣”辅助性物质是“骨组织瓣”。" ;
+      rdfs:label "辅助性物质" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R022
+:R022 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ,
+                  :T114 ;
+      rdfs:range :T069 ;
+      rdfs:comment "表示一个医疗操作的路径，如“腹腔镜多段大肠切除术”的入路是“经皮穿刺内窥镜下入路”。" ;
+      rdfs:label "入路" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R023
+:R023 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T052 ;
+      rdfs:comment "表示为了完成某个操作所采取的动作，如“大肠-大肠吻合术”的操作方法是“吻合术”。" ;
+      rdfs:label "操作方法" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R024
+:R024 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T040 ;
+      rdfs:comment "表示根据操作的目的，运用仪器、设备、装置等手段对人或检测标本进行检验、测量或观察获取结果所采用的技术手段，如“血红蛋白（Hb）测定—分光光度法”的使用技术是“分光光度法”。" ;
+      rdfs:label "使用技术" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R025
+:R025 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ,
+                  :T113 ,
+                  :T114 ;
+      rdfs:range :T043 ;
+      rdfs:comment "表示药物和人体接触作用的途径，如“吸入给药”的给药途径是“吸入”。" ;
+      rdfs:label "给药途径" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R026
+:R026 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T017 ;
+      rdfs:comment "表示进行某项操作过程中使用的物理能量，如“用放射疗法的脉络膜视网膜病损破坏术”使用的能量是“辐射”。" ;
+      rdfs:label "使用的能量" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R027
+:R027 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T014 ;
+      rdfs:comment "表示为进行相应的化学、生物学和病理学等检验操作而采集的人体血液、尿液或组织等标本，如“24小时尿蛋白测量”的受检标本是“尿标本”。" ;
+      rdfs:label "受检标本" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R028
+:R028 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T005 ,
+                 :T010 ,
+                 :T011 ;
+      rdfs:comment "表示一项观测操作观察或测量的成分，如“红细胞丙酮酸激酶-比色法”的受检成分是“丙酮酸激酶”。" ;
+      rdfs:label "受检成分" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R029
+:R029 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T038 ;
+      rdfs:comment "表示针对检测指标而言，定义检测指标是定量型、定性型等，如“24小时尿胱氨酸定量实验”的精度类型是“定量分析”。" ;
+      rdfs:label "精度类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R030
+:R030 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T068 ;
+      rdfs:comment "表示得到观测结果所需要的时间，即一项检测指标究竟是片刻、瞬间或短时间的观测结果，还是在更长时间段内进行测量所获得的观测结果，如“6分钟步行测试”的受检时长是“6分钟”。" ;
+      rdfs:label "受检时长" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R031
+:R031 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T039 ;
+      rdfs:comment "表示一种量纲类型，意指度量，是长短、大小、快慢、强弱等的度量，如质量浓度、酶活性（催化速率），如“红细胞沉降率”的指标是“沉降率”。" ;
+      rdfs:label "指标" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R032
+:R032 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T066 ,
+                 :T067 ,
+                 :T068 ;
+      rdfs:comment "表示进行某项操作时需要遵循的特定条件，如“餐后血糖测量”操作条件是“餐后”。" ;
+      rdfs:label "操作条件" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R033
+:R033 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T005 ,
+                 :T011 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R034
+:R034 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "表示国家食品药品监督管理总局批准药品生产企业生产药品的文号，是药品生产合法性的重要标志，如“必存”有批准文号“国药准字H20031342”。" ;
+      rdfs:label "批准文号" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R035
+:R035 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "表示用于唯一标识按照药品注册管理办法批准上市的与特定生产企业、药品名称、剂型、制剂规格等信息对应的药品编码，如“必存”有药品本位码“86901594000387”。" ;
+      rdfs:label "药品本位码" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R036
+:R036 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T003 ;
+      rdfs:comment "表示生产药品的企业，如“拜阿司匹林”的生产厂家是“拜耳”。" ;
+      rdfs:label "生产厂家" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R037
+:R037 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T042 ;
+      rdfs:comment "表示药物的形态，如“葡萄糖注射液”的剂型是“注射液”、“氟氢可的松乳膏”的剂型是“乳膏”。" ;
+      rdfs:label "剂型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R038
+:R038 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T041 ;
+      rdfs:comment "表示药品规格在分子上的单位，如“氯雷他定糖浆10mg/10ml”的分子规格单位是“mg”。" ;
+      rdfs:label "分子规格单位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R039
+:R039 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T041 ;
+      rdfs:comment "表示药品规格在分母上的单位，如“氯雷他定糖浆10mg/10ml”的分母规格单位是“ml”。" ;
+      rdfs:label "分母规格单位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R040
+:R040 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D007 ;
+      rdfs:comment "表示药品规格在分子上的数值，如“氯雷他定糖浆10mg/10ml”的分子规格数值是“10”。" ;
+      rdfs:label "分子规格数值" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R041
+:R041 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D007 ;
+      rdfs:comment "表示药品规格在分母上的数值，如“氯雷他定糖浆10mg/10ml”的分母规格数值是“10”。" ;
+      rdfs:label "分母规格数值" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R042
+:R042 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ;
+      rdfs:range :T055 ;
+      rdfs:comment "表示突变核苷酸在染色体上的位置，如“NM_001134944.1（GHRL）:c.116G>A（p.Arg39Gln）”的突变核苷酸位点是“Chromosome3，10331519:10331519”。" ;
+      rdfs:label "突变核苷酸位点" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R043
+:R043 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ;
+      rdfs:range :T056 ;
+      rdfs:comment "表示突变核苷酸位置所在的基因组，如“NM_001134944.1（GHRL）:c.116G>A（p.Arg39Gln）”所在基因组为“GRCh37”。" ;
+      rdfs:label "所在基因组" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R044
+:R044 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ;
+      rdfs:range :T009 ;
+      rdfs:comment "表示某基因突变涉及的相关基因，如“NM_001134944.1（GHRL）:c.116G>A（p.Arg39Gln）”的突变基因是“GHRL”。" ;
+      rdfs:label "突变基因" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R045
+:R045 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ;
+      rdfs:range :T057 ;
+      rdfs:comment "表示基因通过转录形成的一种或多种可供编码蛋白质的成熟的mRNA，如“NM_001134944.1（GHRL）:c.116G>A（p.Arg39Gln）”的转录本编码是“NM_001134944.1”。" ;
+      rdfs:label "转录本编码" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R046
+:R046 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ;
+      rdfs:range :T058 ;
+      rdfs:comment "表示基因突变导致的核苷酸的改变，如“NM_001134944.1（GHRL）:c.116G>A（p.Arg39Gln）”的核苷酸改变是“c.116G>A”。" ;
+      rdfs:label "核苷酸改变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R047
+:R047 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ;
+      rdfs:range :T059 ;
+      rdfs:comment "表示基因突变导致的氨基酸的改变，如“NM_001134944.1（GHRL）:c.116G>A（p.Arg39Gln）”的氨基酸改变是“p.Arg39Gln”。" ;
+      rdfs:label "氨基酸改变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R048
+:R048 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T009 ;
+      rdfs:range :T060 ;
+      rdfs:comment "表示基因在染色体上占有的特定位置，如“TP53”的基因位点是“17p13.1”。" ;
+      rdfs:label "基因位点" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R049
+:R049 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T009 ;
+      rdfs:range :T010 ;
+      rdfs:comment "表示基因表达控制着某个组织器官的形成，如“TP53BP1”的基因表达部位是“脑”、“心”、“肾”、“肌”、“胰”、“胎盘”。" ;
+      rdfs:label "基因表达部位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R050
+:R050 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T009 ;
+      rdfs:range :T005 ,
+                 :T010 ;
+      rdfs:comment "表示基因产物在细胞中的位置，如“AACS”的细胞定位是“胞浆”。" ;
+      rdfs:label "细胞定位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R051
+:R051 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T009 ;
+      rdfs:range :T006 ;
+      rdfs:comment "表示基因产物在分子水平上的活性或功能，如“TP53”的分子活性是“蛋白结合”、“ATP结合”。" ;
+      rdfs:label "分子活性" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R052
+:R052 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T009 ;
+      rdfs:range :T007 ;
+      rdfs:comment "表示基因产物参与的生物过程，如“TP53”的参与过程是“细胞凋亡”。" ;
+      rdfs:label "参与过程" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R054
+:R054 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T005 ,
+                 :T011 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R063
+:R063 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指事物的名称。" ;
+      rdfs:label "名称" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R064
+:R064 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指事物的英文名称。" ;
+      rdfs:label "英文名称" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R065
+:R065 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指事物的其他名称。" ;
+      rdfs:label "别称" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R066
+:R066 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指事物的简单描述。" ;
+      rdfs:label "描述" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R067
+:R067 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D011 ;
+      rdfs:comment "指事物的图片，主要指向该图片的URL。" ;
+      rdfs:label "图片" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R068
+:R068 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D011 ;
+      rdfs:comment "指事物的URL链接地址。" ;
+      rdfs:label "链接" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R069
+:R069 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D010 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R072
+:R072 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :D010 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R073
+:R073 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T003 ,
+                  :T004 ,
+                  :T005 ,
+                  :T006 ,
+                  :T007 ,
+                  :T008 ,
+                  :T009 ,
+                  :T010 ,
+                  :T011 ,
+                  :T012 ,
+                  :T013 ,
+                  :T014 ,
+                  :T015 ,
+                  :T016 ,
+                  :T017 ,
+                  :T018 ,
+                  :T028 ,
+                  :T030 ,
+                  :T031 ,
+                  :T033 ,
+                  :T036 ,
+                  :T038 ,
+                  :T039 ,
+                  :T040 ,
+                  :T041 ,
+                  :T042 ,
+                  :T043 ,
+                  :T052 ,
+                  :T055 ,
+                  :T056 ,
+                  :T057 ,
+                  :T058 ,
+                  :T059 ,
+                  :T060 ,
+                  :T065 ,
+                  :T066 ,
+                  :T067 ,
+                  :T068 ,
+                  :T069 ,
+                  :T081 ,
+                  :T082 ,
+                  :T083 ,
+                  :T084 ,
+                  :T085 ,
+                  :T086 ,
+                  :T087 ,
+                  :T088 ,
+                  :T089 ,
+                  :T090 ,
+                  :T092 ,
+                  :T094 ,
+                  :T097 ,
+                  :T098 ,
+                  :T099 ,
+                  :T100 ,
+                  :T101 ,
+                  :T106 ,
+                  :T108 ,
+                  :T109 ,
+                  :T110 ,
+                  :T111 ,
+                  :T112 ,
+                  :T113 ,
+                  :T114 ,
+                  :T115 ;
+      rdfs:range :T081 ;
+      rdfs:comment "指两个事物是等价相同的。" ;
+      rdfs:label "等同于" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R074
+:R074 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T100 ;
+      rdfs:comment "指该临床所见的发病率和（或）患病率高的地区。" ;
+      rdfs:label "高发地区" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R075
+:R075 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指在一定期间内，一定人群中，该病新发生的病例出现的比例。" ;
+      rdfs:label "发病率" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R076
+:R076 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指在一定期间内，一定人群中，该病新旧病例之和所占的比例。" ;
+      rdfs:label "患病率" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R077
+:R077 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指在一定期间内，一定人群中，该病现有感染人数所占比例。" ;
+      rdfs:label "感染率" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R078
+:R078 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T011 ,
+                 :T098 ;
+      rdfs:comment "指体内有病原体生长、繁殖并且能排出病原体的人和动物，包括病人、病原携带者和受感染的动物。" ;
+      rdfs:label "传染源" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R079
+:R079 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T082 ;
+      rdfs:comment "是病原体从传染源排出体外，经过一定的传播方式，到达与侵入新的易感者的过程。" ;
+      rdfs:label "传播途径" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R080
+:R080 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T120 ,
+                  :T121 ;
+      rdfs:range :T099 ;
+      rdfs:comment "指一些具有某种相同特征的人群组合。" ;
+      rdfs:label "相关人群" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R081
+:R081 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T099 ;
+      rdfs:comment "指对该临床所见（一般为传染病）或一种病原体缺乏特异性免疫力，易受感染的人群，暴露后可能会受到感染或发病。" ;
+      rdfs:label "易感人群" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R082
+:R082 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T099 ;
+      rdfs:comment "指对于该临床所见的危险性较高的且具有一些相同特征的人群。" ;
+      rdfs:label "高危人群" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R083
+:R083 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ,
+                  :T106 ,
+                  :T109 ,
+                  :T113 ,
+                  :T114 ;
+      rdfs:range :T099 ;
+      rdfs:comment "指适宜用于具有一些相同特征的人群。" ;
+      rdfs:label "适用人群" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R084
+:R084 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ;
+      rdfs:range :T099 ;
+      rdfs:comment "指不适宜或者被禁止应用于具有一些相同特征的人群。" ;
+      rdfs:label "禁忌人群" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R086
+:R086 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T068 ;
+      rdfs:comment "指临床所见发生最频繁或发展最兴旺的时期。" ;
+      rdfs:label "高峰期" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R087
+:R087 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T009 ;
+      rdfs:comment "指可能引起临床所见的相关遗传基因。" ;
+      rdfs:label "遗传基因" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R088
+:R088 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T115 ;
+      rdfs:range :D010 ,
+                 :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R089
+:R089 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指对临床所见的诊疗过程中所需做的检验检查项目。" ;
+      rdfs:label "相关检查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R090
+:R090 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T101 ;
+      rdfs:comment "指对临时所见的诊断、治疗、预防等内容对应的出处和依据。" ;
+      rdfs:label "诊疗依据" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R091
+:R091 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ,
+                 :T015 ;
+      rdfs:comment "指诊断出临床所见的临床判断标准，即支持该诊断所具有的病史、症状或体征、检查结果等。" ;
+      rdfs:label "诊断标准" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R092
+:R092 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指临床所见与其他临床所见具有相似体征、症状时，在进行临床诊断时需综合临床、病史和检查资料基础上进行分析排除，获得正确或最大可能符合实际状态的诊断。" ;
+      rdfs:label "与…鉴别诊断" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R093
+:R093 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指对临床所见进行治疗时大的原则和方向。" ;
+      rdfs:label "治疗原则" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R094
+:R094 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T015 ;
+      rdfs:comment "指对临床所见的治疗过程中，预先期望达到的治疗结果。" ;
+      rdfs:label "治疗目标" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R095
+:R095 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指对该临床所见进行诊疗时，所执行的医疗操作。" ;
+      rdfs:label "诊疗操作" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R096
+:R096 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T033 ;
+      rdfs:comment "指对临床所见的治疗过程中，直接使用的医疗器械设备。" ;
+      rdfs:label "治疗器械" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R097
+:R097 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ;
+      rdfs:range :T004 ,
+                 :T005 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R098
+:R098 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T004 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R099
+:R099 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T004 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R100
+:R100 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T004 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R101
+:R101 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指对临床所见进行预防时大的原则和方向。" ;
+      rdfs:label "预防原则" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R102
+:R102 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R103
+:R103 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R104
+:R104 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R105
+:R105 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ;
+      rdfs:range :T003 ;
+      rdfs:comment "指出现该临床所见时，建议去医院就诊的科室。" ;
+      rdfs:label "科室" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R107
+:R107 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指原始病因和发生条件的作用下，疾病发生发展的具体环节、机制过程。" ;
+      rdfs:label "发病机制" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R108
+:R108 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R109
+:R109 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指药品与生物体相互作用的规律及对生物体的影响，包括在体内吸收、分解、代谢和排泄等过程。" ;
+      rdfs:label "药理作用" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R110
+:R110 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指根据药物的理化特性，运用毒理学的原理和方法，对药物进行全面系统的安全性评价并阐明其毒性作用机制。" ;
+      rdfs:label "药物毒理" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R111
+:R111 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "药物在体内吸收、分布、生物转化和排泄等过程，及药物效应和血药浓度随时间消长的规律。" ;
+      rdfs:label "药代动力学" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R112
+:R112 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指物理性质和化学性质，物理性质包括熔沸点，常温下的状态，颜色，化学性质包括酸碱度等。" ;
+      rdfs:label "理化性状" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R113
+:R113 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指同时或在一定时间内由先后服用其他药物后会产生一些复合效应，可使药效加强或副作用减轻，也可使药效减弱或出现不应有的毒副作用。" ;
+      rdfs:label "药物相互作用" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R114
+:R114 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 ;
+      rdfs:comment "指与其他药物联合应用所产生的效应等于或接近分别应用所产生的效应之和。联用两种作用于同一部位或受体、且作用相同的药物，多呈相加作用，凡能产生相加作用的两药联用时，两药均应减量，否则，可引起药物中毒。" ;
+      rdfs:label "相加作用" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R115
+:R115 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 ;
+      rdfs:comment "指与其他药物联合应用时，会达到彼此效应增强的效果。" ;
+      rdfs:label "协同作用" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R116
+:R116 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 ;
+      rdfs:comment "指与其他药物联合应用后，使得产生的效应减弱或消失，多数情况下不宜配对使用。" ;
+      rdfs:label "拮抗作用" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R117
+:R117 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R118
+:R118 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R119
+:R119 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T004 ,
+                 :T005 ,
+                 :T011 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R120
+:R120 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ,
+                  :T113 ,
+                  :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指执行某种操作或使用药物时，患者有应注意的相关事项。" ;
+      rdfs:label "注意事项" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R121
+:R121 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指对于特殊情况或人群用药的注释说明，包括孕妇和哺乳期妇女用药、老年用药、儿童用药等说明。" ;
+      rdfs:label "特殊用药说明" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R122
+:R122 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ,
+                  :T113 ,
+                  :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指使用药物时，药物的使用或者叫服用方法，以及药物的一定时间内服用的数量。" ;
+      rdfs:label "用法用量" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R123
+:R123 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指使用药物时，每次用药的剂量。" ;
+      rdfs:label "剂量值" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R124
+:R124 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T041 ;
+      rdfs:comment "指使用药物时，每次用药剂量的单位。" ;
+      rdfs:label "剂量单位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R125
+:R125 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T068 ;
+      rdfs:comment "指使用药物时，一定时间内用药的频率和次数。" ;
+      rdfs:label "用药频次" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R126
+:R126 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T068 ;
+      rdfs:comment "指使用药物时，每次给药的时间。" ;
+      rdfs:label "用药时间" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R127
+:R127 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T068 ;
+      rdfs:comment "指使用药物时，两次用药之间的应当间隔的时长。" ;
+      rdfs:label "用药间隔" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R128
+:R128 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T068 ;
+      rdfs:comment "指使用药物时，针对病情经推荐用药多长时间后作为一个疗程。" ;
+      rdfs:label "用药疗程" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R129
+:R129 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T108 ;
+      rdfs:comment "指用药的最终目标，是治疗或缓解症状还是预防相关疾病等。" ;
+      rdfs:label "用药目的" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R130
+:R130 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指药品在储存过程中的要求。" ;
+      rdfs:label "贮藏" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R131
+:R131 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指药品的包装说明。" ;
+      rdfs:label "包装" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R132
+:R132 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D004 ;
+      rdfs:comment "指药品按规定方法存储的有效日期。" ;
+      rdfs:label "有效期" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R133
+:R133 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指企业在生产药品中所遵守的国家、行业、地方或企业标准。" ;
+      rdfs:label "执行标准" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R134
+:R134 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T088 ;
+      rdfs:comment "指药品在《处方药与非处方药分类管理办法》中的分类。" ;
+      rdfs:label "药品分类标签" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R135
+:R135 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指药品所在的国家基本药物目录。" ;
+      rdfs:label "国家基本药物目录" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R136
+:R136 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ,
+                  :T113 ,
+                  :T114 ;
+      rdfs:range :T001 ,
+                 :T002 ,
+                 :T015 ;
+      rdfs:comment "指药物或操作适用于某种疾病症状（或证候）等情况。" ;
+      rdfs:label "适应证" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R137
+:R137 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ,
+                  :T113 ,
+                  :T114 ;
+      rdfs:range :T001 ,
+                 :T002 ,
+                 :T015 ;
+      rdfs:comment "指药物或操作不适宜或被禁止应用于某些疾病或体征等情况，使用后可引起严重不良后果。" ;
+      rdfs:label "禁忌证" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R138
+:R138 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T004 ,
+                  :T065 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R139
+:R139 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T083 ;
+      rdfs:comment "指操作的优先等级。" ;
+      rdfs:label "优先级别" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R140
+:R140 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T001 ,
+                 :T002 ;
+      rdfs:comment "指操作的所关注的疾病或症状。" ;
+      rdfs:label "操作重心" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R141
+:R141 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T084 ;
+      rdfs:comment "指操作的意图是治疗、预防、诊断等。" ;
+      rdfs:label "操作意图" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R142
+:R142 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T085 ;
+      rdfs:comment "指操作的具体分期次数（如首次、二次）。" ;
+      rdfs:label "操作分期" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R143
+:R143 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T068 ;
+      rdfs:comment "指操作的最优执行时间。" ;
+      rdfs:label "最佳操作时间" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R144
+:R144 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指操作过程中相关物质的来源。" ;
+      rdfs:label "物质来源" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R145
+:R145 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指执行操作时的步骤和流程。" ;
+      rdfs:label "操作步骤" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R146
+:R146 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指在操作前应当进行的相关检查操作。" ;
+      rdfs:label "操作前检查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R147
+:R147 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指需要进行麻醉的操作，对麻醉相关事项的说明。" ;
+      rdfs:label "麻醉说明" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R148
+:R148 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ,
+                  :T114 ;
+      rdfs:range :T002 ,
+                 :T086 ;
+      rdfs:comment "指需要进行麻醉的操作，对患者进行麻醉的方式。" ;
+      rdfs:label "麻醉方式" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R149
+:R149 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指需要进行麻醉的操作，可选用的麻醉药品。" ;
+      rdfs:label "麻醉用药" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R151
+:R151 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T002 ,
+                  :T065 ,
+                  :T114 ;
+      rdfs:range :T087 ;
+      rdfs:comment "指执行操作后，建议患者的饮食类型。" ;
+      rdfs:label "操作后饮食类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R152
+:R152 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :T016 ;
+      rdfs:comment "指执行观测操作所期望获取的结果内容的本质。" ;
+      rdfs:label "观察目标" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R153
+:R153 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指执行观测操作时，对操作所处环境的要求。" ;
+      rdfs:label "环境要求" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R154
+:R154 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指执行观测操作时，观察操作时具体的操作要求。" ;
+      rdfs:label "实验室操作要求" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R155
+:R155 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指执行观测操作时，具体的生物安全要求。" ;
+      rdfs:label "生物安全要求" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R156
+:R156 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指观测操作结果值的正常参考结果。" ;
+      rdfs:label "参考结果" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R157
+:R157 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指观测操作结果值的参考范围上限值。" ;
+      rdfs:label "参考上限" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R158
+:R158 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :T089 ;
+      rdfs:comment "指观测操作结果值的参考范围上限值的运算符。" ;
+      rdfs:label "上限运算符" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R159
+:R159 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指观测操作结果值的参考范围下限值。" ;
+      rdfs:label "参考下限" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R160
+:R160 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :T089 ;
+      rdfs:comment "指观测操作结果值的参考范围下限值的运算符。" ;
+      rdfs:label "下限运算符" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R161
+:R161 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指观测操作结果值异常，且这种异常出现时，表明患者可能正处于有生命危险的边缘状态。" ;
+      rdfs:label "危急值" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R162
+:R162 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T065 ;
+      rdfs:range :T089 ;
+      rdfs:comment "指观测操作结果值的危急值的运算符。" ;
+      rdfs:label "危急值运算符" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R163
+:R163 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T041 ;
+      rdfs:comment "指观察测量结果所使用的计量单位。" ;
+      rdfs:label "单位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R164
+:R164 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ,
+                  :T065 ;
+      rdfs:range :T001 ,
+                 :T015 ;
+      rdfs:comment "指观察测量结果对于临床诊断时可以直接或间接帮助判断病情，提示某种疾病或情况的发生。" ;
+      rdfs:label "结果提示" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R165
+:R165 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T016 ;
+      rdfs:range :T066 ,
+                 :T067 ,
+                 :T068 ;
+      rdfs:comment "指获取观察对象的结果时需要遵循的前提条件。" ;
+      rdfs:label "观察条件" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R166
+:R166 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T008 ,
+                  :T009 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指具有特定基因或基因突变的个体，在一定环境条件下，所表现出来的性状或特征。" ;
+      rdfs:label "表型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R167
+:R167 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :T090 ;
+      rdfs:comment "指文献资料内容所采用的语言。" ;
+      rdfs:label "语种" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R168
+:R168 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指提供文献资料内容概要为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。" ;
+      rdfs:label "摘要" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R169
+:R169 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :D010 ,
+                 :T081 ;
+      rdfs:comment "用于描述文献资料的主题内容的通用词、形式化词或短语。" ;
+      rdfs:label "关键词" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R170
+:R170 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :D007 ;
+      rdfs:comment "指文献资料内容的页码数量。" ;
+      rdfs:label "总页数" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R171
+:R171 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :T003 ,
+                 :T098 ;
+      rdfs:comment "指文献资料的的创作者，可以是人或者机构。" ;
+      rdfs:label "作者" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R172
+:R172 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指采用《中国图书馆分类法》对文献资料进行主题分析，并依照文献内容的学科属性和特征，分门别类地组织文献，所获取的分类代号。" ;
+      rdfs:label "中文分类号" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R173
+:R173 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T101 ,
+                  :T106 ,
+                  :T109 ;
+      rdfs:range :T101 ;
+      rdfs:comment "指文献资料所引用或参考的其他作品资料，如其他出版物、学术文章等等。" ;
+      rdfs:label "参考文献" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R181
+:R181 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ,
+                  :T109 ;
+      rdfs:range :D004 ;
+      rdfs:comment "指标准或临床实践指南的首次印发或公开的日期。" ;
+      rdfs:label "发布日期" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R182
+:R182 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :T003 ;
+      rdfs:comment "指图书或临床实践指南的出版机构。" ;
+      rdfs:label "出版社" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R183
+:R183 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :T100 ;
+      rdfs:comment "指图书或临床实践指南的出版所在地点。" ;
+      rdfs:label "出版地" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R190
+:R190 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :T094 ;
+      rdfs:comment "指标准、指南、研究等事物的状态。" ;
+      rdfs:label "状态" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R194
+:R194 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ,
+                  :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指标准所适用的范围。" ;
+      rdfs:label "适用范围" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R210
+:R210 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :T092 ;
+      rdfs:comment "指临床实践指南的类型，如指南、临床路径、建议、专家共识等。" ;
+      rdfs:label "指南类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R211
+:R211 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :T097 ;
+      rdfs:comment "指临床实践指南所属的学科分类。" ;
+      rdfs:label "学科分类" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R212
+:R212 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :D010 ,
+                 :T081 ;
+      rdfs:comment "指临床实践指南所针对的病情或治疗方法。" ;
+      rdfs:label "指南主题" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R213
+:R213 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床实践指南所采用的治疗方法系统（枚举），如中药，西药。" ;
+      rdfs:label "疗法系统" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R214
+:R214 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :D010 ;
+      rdfs:comment "医疗方针的证据水平。枚举类型。" ;
+      rdfs:label "证据水平" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R215
+:R215 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :D010 ;
+      rdfs:comment "用来形成医疗方针的数据源，如：RCT，共识等等。" ;
+      rdfs:label "证据来源" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R216
+:R216 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :T003 ;
+      rdfs:comment "认可该项成为其医学系统组成部分的机构。" ;
+      rdfs:label "权威认证" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R217
+:R217 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床实践指南推荐的强度。" ;
+      rdfs:label "推荐强度" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R229
+:R229 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R230
+:R230 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R231
+:R231 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R233
+:R233 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T002 ,
+                  :T018 ,
+                  :T065 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指临床所见或操作的发展过程中引起某种临床所见的发生，后者即为前者的并发症；后者可以由前者引起，也可以由其他原因引起的，既可以同时发生也可以先后发生。" ;
+      rdfs:label "并发症" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R234
+:R234 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指临床路径所适用的疾病和症状等。" ;
+      rdfs:label "适用对象" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R235
+:R235 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T110 ;
+      rdfs:comment "指临床路径所适用的治疗阶段，如初治、复治和康复等。" ;
+      rdfs:label "治疗阶段" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R236
+:R236 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ,
+                  :T114 ;
+      rdfs:range :T002 ,
+                 :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R237
+:R237 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T111 ;
+      rdfs:comment "指临床路径所适应的就诊类型，包括门诊、住院等。" ;
+      rdfs:label "就诊类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R238
+:R238 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径规定的标准住院时间或治疗疗程等。" ;
+      rdfs:label "标准治疗时长" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R242
+:R242 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R243
+:R243 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R244
+:R244 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R245
+:R245 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R246
+:R246 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R247
+:R247 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R248
+:R248 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T010 ,
+                  :T036 ;
+      rdfs:range :T010 ;
+      rdfs:comment "表示动脉、静脉、神经、支气管等分支结构，如“坐骨神经动脉”是“臀下动脉”的分支。" ;
+      rdfs:label "是…的分支" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R249
+:R249 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径在实际应用过程与原路径出现了偏离，与任何预期的决定相比有所变化的相关情况。" ;
+      rdfs:label "变异及原因分析" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R250
+:R250 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径中所规定的患者可以出院的标准。" ;
+      rdfs:label "出院标准" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R251
+:R251 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径中所规定的相关病种治疗的费用。" ;
+      rdfs:label "参考费用标准" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R253
+:R253 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T001 ,
+                 :T015 ;
+      rdfs:comment "指诊断相关疾病所需要的相关症状和体征等。" ;
+      rdfs:label "诊断依据" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R254
+:R254 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指诊断相关疾病所需要的相关操作和检查。" ;
+      rdfs:label "诊断相关检查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R256
+:R256 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指疾病治疗流程中预防相关感染所需使用的药物。" ;
+      rdfs:label "预防性抗菌药物" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R257
+:R257 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R258
+:R258 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R259
+:R259 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R260
+:R260 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R261
+:R261 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R262
+:R262 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T109 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R263
+:R263 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T109 ;
+      rdfs:range :T015 ,
+                 :T112 ;
+      rdfs:comment "指治疗相关临床所见所采用的治疗方案。" ;
+      rdfs:label "治疗方案" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R264
+:R264 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指手术操作中所需要做的相关检查和操作。" ;
+      rdfs:label "术中操作" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R265
+:R265 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径相关治疗方案在执行前需要准备的时间。" ;
+      rdfs:label "治疗前准备时间" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R266
+:R266 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径中手术治疗的具体时间。" ;
+      rdfs:label "手术日" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R267
+:R267 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指临床路径相关治疗方案后需要恢复的时间。" ;
+      rdfs:label "治疗后恢复时间" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R268
+:R268 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指手术治疗需要输血的情况。" ;
+      rdfs:label "手术输血情况" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R269
+:R269 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指手术治疗过程中所需使用的药品。" ;
+      rdfs:label "术中用药" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R270
+:R270 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指手术治疗后所需使用的药品。" ;
+      rdfs:label "术后用药" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R271
+:R271 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指手术治疗前所需使用的药品。" ;
+      rdfs:label "术前用药" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R272
+:R272 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T113 ,
+                  :T114 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指相关治疗方案中所需使用的药品。" ;
+      rdfs:label "选择用药" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R273
+:R273 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T113 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指药物治疗过程中需要完成的检查项目，与属性关系“选择用药”成组。" ;
+      rdfs:label "用药相关检查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R274
+:R274 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R275
+:R275 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R276
+:R276 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R277
+:R277 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R278
+:R278 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R279
+:R279 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R280
+:R280 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指通常容易与该疾病伴发的疾病。" ;
+      rdfs:label "常伴发…" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R281
+:R281 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指疾病进展发生为另一种更加严重的状态。" ;
+      rdfs:label "发展为…" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R282
+:R282 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指根据一些标准可以将疾病分为不同的类型。" ;
+      rdfs:label "分型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R283
+:R283 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指被定义为此种类型疾病的标准。" ;
+      rdfs:label "分型分期标准" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R285
+:R285 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ,
+                 :T002 ,
+                 :T004 ,
+                 :T015 ;
+      rdfs:comment "指促进特定疾病发生发展的因素，可能是疾病的致病因素或条件，也可能是该疾病的一个环节。" ;
+      rdfs:label "危险因素" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R286
+:R286 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指疾病的遗传的方式。" ;
+      rdfs:label "遗传方式" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R287
+:R287 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R288
+:R288 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指预先服用可以防止或减少盖疾病发生的药物。" ;
+      rdfs:label "预防用药" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R289
+:R289 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R290
+:R290 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指为诊断或治疗该疾病所需要做的体格检查。" ;
+      rdfs:label "体格检查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R291
+:R291 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R292
+:R292 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指为诊断或治疗该疾病所需要做的辅助检查。" ;
+      rdfs:label "辅助检查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R293
+:R293 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指该疾病随访时需要复查的检查项目。" ;
+      rdfs:label "随访复查" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R294
+:R294 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T011 ;
+      rdfs:range :T005 ;
+      rdfs:comment "指可以用于破坏病原体生物学活性的物质。" ;
+      rdfs:label "灭活物质" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R295
+:R295 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指一般疾病在发展过程中的一定阶段，这一阶段是从致病刺激物侵入机体或对机体发生作用起，到机体出现反应或开始呈现症状时止。" ;
+      rdfs:label "潜伏期" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R296
+:R296 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R297
+:R297 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R298
+:R298 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T115 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指流行病学接触史，在传染病发生时，利用流行病学特征，根据传染病人的接触史，对病人进行的传染来源的推断或诊断。" ;
+      rdfs:label "流行病学史" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R299
+:R299 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T115 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指作出临床诊断所遵循的逻辑标准。" ;
+      rdfs:label "诊断逻辑" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R300
+:R300 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R302
+:R302 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指疾病必需治疗的地点。" ;
+      rdfs:label "治疗场所" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R303
+:R303 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ,
+                 :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R304
+:R304 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指对疾病的病情进行监测时所需要做的操作。" ;
+      rdfs:label "病情监测" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R305
+:R305 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ,
+                 :T004 ,
+                 :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R306
+:R306 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ,
+                 :T004 ,
+                 :T015 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R307
+:R307 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ,
+                  :T113 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指使用药物的组成剂量。" ;
+      rdfs:label "剂量" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R308
+:R308 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指该药品处方的循证文献出处。" ;
+      rdfs:label "处方来源" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R309
+:R309 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ,
+                  :T114 ;
+      rdfs:range :T002 ;
+      rdfs:comment "指对患该疾病病人进行护理时所需做的详细操作。" ;
+      rdfs:label "护理操作" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R310
+:R310 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T015 ;
+      rdfs:comment "指对患该疾病病人进行护理时所需做的护理方案。" ;
+      rdfs:label "护理方案" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R311
+:R311 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T114 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指对患该疾病病人实行护理方案时的要求。" ;
+      rdfs:label "护理要求" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R312
+:R312 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指对患该疾病病人出院后应注意的事项。" ;
+      rdfs:label "出院后注意事项" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R314
+:R314 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R315
+:R315 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指对患该疾病病人可以从重症病房转出的标准。" ;
+      rdfs:label "转出重症病房标准" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R316
+:R316 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T004 ;
+      rdfs:range :D010 ;
+      rdfs:comment "指药品在各地的医保目录中的报销类别。" ;
+      rdfs:label "医保支付类别" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R317
+:R317 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T001 ;
+      rdfs:comment "指疾病病情基本好转后遗留下来的某种组织、器官的缺损或者功能上的障碍。" ;
+      rdfs:label "后遗症" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R318
+:R318 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T004 ;
+      rdfs:comment "指在一些情况下为了确保疗效、安全用药、避免毒副作用的产生，应禁忌的药物。" ;
+      rdfs:label "禁忌药物" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R319
+:R319 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T001 ,
+                  :T018 ;
+      rdfs:range :T002 ;
+      rdfs:comment "是指促使损伤、疾病、发育缺陷等致残因素造成的身心功能障碍或残疾恢复正常或接近正常。" ;
+      rdfs:label "康复治疗" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R320
+:R320 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T106 ,
+                  :T121 ;
+      rdfs:range :T113 ,
+                 :T114 ,
+                 :T120 ;
+      rdfs:comment "# 部分与整体的关系" ;
+      rdfs:label "包含" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R324
+:R324 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T120 ;
+      rdfs:range :T121 ;
+      rdfs:comment "临床指南的临床问题与推荐意见的对应关系" ;
+      rdfs:label "推荐意见" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R325
+:R325 rdf:type owl:ObjectProperty ;
+      rdfs:domain :T121 ;
+      rdfs:range :T113 ,
+                 :T114 ;
+      rdfs:comment "推荐意见与治疗方案的支持关系" ;
+      rdfs:label "支持" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R326
+:R326 rdf:type owl:ObjectProperty ;
+      rdfs:comment "推荐意见与治疗方案的关系" ;
+      rdfs:label "不支持" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R0000001
+:R0000001 rdf:type owl:DatatypeProperty ;
+          rdfs:domain :T036 ;
+          rdfs:range xsd:string ;
+          rdfs:label "描述" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R327
+:R327 rdf:type owl:DatatypeProperty ;
+      rdfs:domain :T112 ;
+      rdfs:range xsd:string ;
+      rdfs:label "次序" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R328
+:R328 rdf:type owl:DatatypeProperty ;
+      rdfs:domain :T002 ;
+      rdfs:range xsd:string ;
+      rdfs:label "中止条件" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#0007
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#0007> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#D004
+:D004 rdf:type owl:Class ;
+      rdfs:comment "日期，使用<ahref='http://en.wikipedia.org/wiki/ISO_8601'>ISO8601日期格式</a>.。" ;
+      rdfs:label "日期" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#D007
+:D007 rdf:type owl:Class ;
+      rdfs:comment "数据类型：数字。" ;
+      rdfs:label "数字" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#D010
+:D010 rdf:type owl:Class ;
+      rdfs:comment "文本。" ;
+      rdfs:label "文本" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#D011
+:D011 rdf:type owl:Class ;
+      rdfs:subClassOf :D010 ;
+      rdfs:comment "数据类型，URL链接。" ;
+      rdfs:label "URL" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R017
+:R017 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R018
+:R018 rdf:type owl:Class ;
+      rdfs:subClassOf :R017 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R019
+:R019 rdf:type owl:Class ;
+      rdfs:subClassOf :R017 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R033
+:R033 rdf:type owl:Class ;
+      rdfs:subClassOf :R108 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R054
+:R054 rdf:type owl:Class ;
+      rdfs:subClassOf :R108 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R069
+:R069 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R072
+:R072 rdf:type owl:Class ;
+      rdfs:subClassOf :R069 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R088
+:R088 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R097
+:R097 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R098
+:R098 rdf:type owl:Class ;
+      rdfs:subClassOf :R097 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R099
+:R099 rdf:type owl:Class ;
+      rdfs:subClassOf :R097 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R100
+:R100 rdf:type owl:Class ;
+      rdfs:subClassOf :R097 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R102
+:R102 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R103
+:R103 rdf:type owl:Class ;
+      rdfs:subClassOf :R102 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R104
+:R104 rdf:type owl:Class ;
+      rdfs:subClassOf :R102 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R108
+:R108 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R117
+:R117 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R118
+:R118 rdf:type owl:Class ;
+      rdfs:subClassOf :R117 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R119
+:R119 rdf:type owl:Class ;
+      rdfs:subClassOf :R117 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R138
+:R138 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R229
+:R229 rdf:type owl:Class ;
+      rdfs:subClassOf :R138 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R230
+:R230 rdf:type owl:Class ;
+      rdfs:subClassOf :R138 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R231
+:R231 rdf:type owl:Class ;
+      rdfs:subClassOf :R138 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R236
+:R236 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R242
+:R242 rdf:type owl:Class ;
+      rdfs:subClassOf :R289 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R243
+:R243 rdf:type owl:Class ;
+      rdfs:subClassOf :R242 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R244
+:R244 rdf:type owl:Class ;
+      rdfs:subClassOf :R242 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R245
+:R245 rdf:type owl:Class ;
+      rdfs:subClassOf :R289 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R246
+:R246 rdf:type owl:Class ;
+      rdfs:subClassOf :R245 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R247
+:R247 rdf:type owl:Class ;
+      rdfs:subClassOf :R245 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R257
+:R257 rdf:type owl:Class ;
+      rdfs:subClassOf :R259 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R258
+:R258 rdf:type owl:Class ;
+      rdfs:subClassOf :R259 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R259
+:R259 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R260
+:R260 rdf:type owl:Class ;
+      rdfs:subClassOf :R262 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R261
+:R261 rdf:type owl:Class ;
+      rdfs:subClassOf :R262 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R262
+:R262 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R274
+:R274 rdf:type owl:Class ;
+      rdfs:subClassOf :R088 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R275
+:R275 rdf:type owl:Class ;
+      rdfs:subClassOf :R274 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R276
+:R276 rdf:type owl:Class ;
+      rdfs:subClassOf :R274 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R277
+:R277 rdf:type owl:Class ;
+      rdfs:subClassOf :R088 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R278
+:R278 rdf:type owl:Class ;
+      rdfs:subClassOf :R277 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R279
+:R279 rdf:type owl:Class ;
+      rdfs:subClassOf :R277 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R287
+:R287 rdf:type owl:Class ;
+      rdfs:subClassOf :R236 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R289
+:R289 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R291
+:R291 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R296
+:R296 rdf:type owl:Class ;
+      rdfs:subClassOf :R291 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R297
+:R297 rdf:type owl:Class ;
+      rdfs:subClassOf :R291 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R300
+:R300 rdf:type owl:Class ;
+      rdfs:subClassOf :R314 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R303
+:R303 rdf:type owl:Class ;
+      rdfs:subClassOf :R236 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R305
+:R305 rdf:type owl:Class ;
+      rdfs:subClassOf :R236 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R306
+:R306 rdf:type owl:Class ;
+      rdfs:subClassOf :R236 .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#R314
+:R314 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T001
+:T001 rdf:type owl:Class ;
+      rdfs:comment "表示当前状况下所观察到的表现，或者是患者自身经历并作为主诉的表现。" ;
+      rdfs:label "临床所见" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T002
+:T002 rdf:type owl:Class ;
+      rdfs:comment "表示为诊断、预防、治疗疾病或改善身体机能所采取的操作、方法或技术。" ;
+      rdfs:label "操作" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T003
+:T003 rdf:type owl:Class ;
+      rdfs:comment "表示人们为特定目的聚集而形成的团体，机构或场所。" ;
+      rdfs:label "组织机构" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T004
+:T004 rdf:type owl:Class ;
+      rdfs:comment "表示由生产厂家生产的药物制剂，名称通常包括物质、强度和形式等。" ;
+      rdfs:label "药品" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T005
+:T005 rdf:type owl:Class ;
+      rdfs:comment "表示具有确定成分的原材料。" ;
+      rdfs:label "物质" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T006
+:T006 rdf:type owl:Class ;
+      rdfs:comment "表示分子水平上的生理功能。" ;
+      rdfs:label "分子活性" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T007
+:T007 rdf:type owl:Class ;
+      rdfs:comment "表示生物体通过遗传程序来实现的一种特定目标，通常由它们的结果或终止状态来描述。" ;
+      rdfs:label "生物过程" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T008
+:T008 rdf:type owl:Class ;
+      rdfs:comment "表示基因组DNA分子发生的突然的、可遗传的变异现象。" ;
+      rdfs:label "基因突变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T009
+:T009 rdf:type owl:Class ;
+      rdfs:comment "表示DNA或RNA分子上特定的核苷酸序列，是代表遗传的功能单位。" ;
+      rdfs:label "基因" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T010
+:T010 rdf:type owl:Class ;
+      rdfs:comment "表示正常或异常的人体组织器官的位置、形态、结构、功能及其发展规律。" ;
+      rdfs:label "人体形态与结构" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T011
+:T011 rdf:type owl:Class ;
+      rdfs:comment "表示活着的生命个体，包括所有植物、动物和微生物。" ;
+      rdfs:label "生物" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T012
+:T012 rdf:type owl:Class ;
+      rdfs:comment "表示特指或类指等限定作用的词。" ;
+      rdfs:label "限定词" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T013
+:T013 rdf:type owl:Class ;
+      rdfs:comment "表示视觉或触觉可感知的物体。" ;
+      rdfs:label "物理实体" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T014
+:T014 rdf:type owl:Class ;
+      rdfs:comment "表示通过患者所获得的用于检查或分析的样例。" ;
+      rdfs:label "标本" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T015
+:T015 rdf:type owl:Class ;
+      rdfs:comment "表示自然发生，排除了操作和干预以外所发生的情况。" ;
+      rdfs:label "事件" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T016
+:T016 rdf:type owl:Class ;
+      rdfs:comment "表示针对临床所见的本质特征进行评估或观察的对象。" ;
+      rdfs:label "观察对象" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T017
+:T017 rdf:type owl:Class ;
+      rdfs:comment "表示物质的时空分布可能变化程度的度量，用来表征物理系统做功的本领。" ;
+      rdfs:label "物理能量" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T018
+:T018 rdf:type owl:Class ;
+      rdfs:subClassOf :T001 ;
+      rdfs:comment "表示在一定的病因作用下，机体内稳态调节紊乱而导致的生命活动障碍。" ;
+      rdfs:label "疾病" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T028
+:T028 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示一个临床所见在其发展过程中所表现出的轻重程度。" ;
+      rdfs:label "严重程度" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T030
+:T030 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示对揭示临床所见本质特征的评价对象进行评估或观察后所得到的结果。" ;
+      rdfs:label "评价结果" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T031
+:T031 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示在不同疾病中出现的共同存在的机能、代谢和结构变化的过程。" ;
+      rdfs:label "病理过程" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T033
+:T033 rdf:type owl:Class ;
+      rdfs:subClassOf :T013 ;
+      rdfs:comment "表示用于诊断、治疗或预防疾病的人造物体。" ;
+      rdfs:label "医疗器械" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T036
+:T036 rdf:type owl:Class ;
+      rdfs:subClassOf :T010 ;
+      rdfs:comment "表示在人体器官、组织或细胞水平上的异常形态学变化。" ;
+      rdfs:label "异常形态结构" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T038
+:T038 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示对某项操作进行标识和测量的维度。" ;
+      rdfs:label "精度类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T039
+:T039 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示物理量的类型。" ;
+      rdfs:label "量纲类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T040
+:T040 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示根据受检的目的，运用仪器、设备、装置等手段对人或检测标本进行测量、观察获取结果所采用的技术手段。" ;
+      rdfs:label "技术" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T041
+:T041 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示给定的某一基础物理量。" ;
+      rdfs:label "单位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T042
+:T042 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示药物制剂的形态。" ;
+      rdfs:label "剂型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T043
+:T043 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示药物和人体接触作用的途径。" ;
+      rdfs:label "给药途径" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T052
+:T052 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示为了完成某个操作所采取的动作。" ;
+      rdfs:label "操作方法" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T055
+:T055 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示核苷酸在染色体上的位置。" ;
+      rdfs:label "核苷酸位点" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T056
+:T056 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示细胞或生物体的全套遗传物质，或载有遗传信息的全体核酸，包括所有染色体上的核酸，对于真核生物，其基因组还包括线粒体上的核酸。" ;
+      rdfs:label "基因组" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T057
+:T057 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示基因通过转录形成的可供编码蛋白质的成熟的转录本的编码。" ;
+      rdfs:label "转录本编码" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T058
+:T058 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示在编码DNA参考序列中核苷酸的改变。" ;
+      rdfs:label "核苷酸改变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T059
+:T059 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示在蛋白质参考序列中氨基酸的改变。" ;
+      rdfs:label "氨基酸改变" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T060
+:T060 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示基因在染色体上占有的特定位置。" ;
+      rdfs:label "基因位点" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T065
+:T065 rdf:type owl:Class ;
+      rdfs:subClassOf :T002 ;
+      rdfs:comment "表示使用某种技术方法，对标本或成分进行组成、数量或浓度等相关特性观察和测量的一系列操作。" ;
+      rdfs:label "观测操作" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T066
+:T066 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示进行某项检查操作时身体所处的运动或静息等状态。" ;
+      rdfs:label "身体状态" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T067
+:T067 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指患者在病床上的身体姿势或检查时所保持的身体姿势。" ;
+      rdfs:label "体位" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T068
+:T068 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示跟时间相关的不同状态，可以是具体的时间点、时间段或者频率等，如青年期、运动中、每年等。" ;
+      rdfs:label "时间状态" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T069
+:T069 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "表示实体空间之间的关系，如：骨关节内、口周、踝关节入路。" ;
+      rdfs:label "空间关系" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T081
+:T081 rdf:type owl:Class ;
+      owl:equivalentClass owl:Thing ;
+      rdfs:comment "一切事物的基类，最通用的项目类型。" ;
+      rdfs:label "事物" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T082
+:T082 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指病原体内传染源排出，侵入另一易感机体所经过的途径。" ;
+      rdfs:label "传播途径" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T083
+:T083 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指该操作的优先等级。" ;
+      rdfs:label "优先级别" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T084
+:T084 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指该操作的意图，如治疗、预防、诊断等。" ;
+      rdfs:label "意图" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T085
+:T085 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指操作的分期和次数。" ;
+      rdfs:label "分期状态" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T086
+:T086 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指进行麻醉时选用的麻醉方式。" ;
+      rdfs:label "麻醉方式" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T087
+:T087 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指某一种特定形式的饮食类型。" ;
+      rdfs:label "饮食类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T088
+:T088 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指处方药与非处方药分类管理制度中的分类，这是国际上通行的一种药品管理模式，按照药品的安全性和有效性依其品种、规格、适应症、剂量及给药途径不同，对药品分别按出发要和非处方药进行管理的一种制度。" ;
+      rdfs:label "药物处方分类" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T089
+:T089 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指计算机科学的编程语言中，测试或定义两个实体之间某种关系的操作符，这些包括数值等式和不等式。" ;
+      rdfs:label "关系运算符" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T090
+:T090 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指自然语言，如中文、英文等。" ;
+      rdfs:label "语种" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T092
+:T092 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "临床指南具体的分类类型，如专家共识、合理用药指南等。" ;
+      rdfs:label "指南类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T094
+:T094 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指临床指南的状态描述，如现行、废止等。" ;
+      rdfs:label "指南状态" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T097
+:T097 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "医学研究的学科分类。" ;
+      rdfs:label "医学学科" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T098
+:T098 rdf:type owl:Class ;
+      rdfs:comment "人物。" ;
+      rdfs:label "人" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T099
+:T099 rdf:type owl:Class ;
+      rdfs:subClassOf :T098 ;
+      rdfs:comment "具有制定特征的一类人的集合。" ;
+      rdfs:label "人群" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T100
+:T100 rdf:type owl:Class ;
+      rdfs:comment "指广泛意义上的一个地方。" ;
+      rdfs:label "地点" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T101
+:T101 rdf:type owl:Class ;
+      rdfs:comment "通过一定的方法和手段、运用一定的意义表达和记录体系记录在一定载体的有历史价值和研究价值的知识。" ;
+      rdfs:label "文献资料" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T106
+:T106 rdf:type owl:Class ;
+      rdfs:subClassOf :T101 ;
+      rdfs:comment "由标准组织（例如，ACC/AHA）或一致声明作出的关于如何诊断或治疗某种疾病的推荐。" ;
+      rdfs:label "临床实践指南" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T108
+:T108 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指使用药物的目的，如预防、治疗等。" ;
+      rdfs:label "用药目的" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T109
+:T109 rdf:type owl:Class ;
+      rdfs:subClassOf :T101 ;
+      rdfs:comment "指针对某一疾病或情况建立一套标准化治疗模式与程序，是一个有关临床治疗的综合模式，以循证医学实践和指南为指导来促进治疗组织和疾病管理的方法。最终起到规范医疗行为，减少变异，降低成本，提高质量的作用。" ;
+      rdfs:label "临床路径" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T110
+:T110 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指临床所见的治疗阶段，如初治、复治和康复等" ;
+      rdfs:label "治疗阶段" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T111
+:T111 rdf:type owl:Class ;
+      rdfs:subClassOf :T012 ;
+      rdfs:comment "指临床路径所适应的就诊类型，包括门诊、住院等" ;
+      rdfs:label "就诊类型" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T112
+:T112 rdf:type owl:Class ;
+      rdfs:subClassOf :T015 ;
+      rdfs:comment "指疾病的相关治疗方案，包括药物治疗方案和操作治疗方案。" ;
+      rdfs:label "治疗方案" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T113
+:T113 rdf:type owl:Class ;
+      rdfs:subClassOf :T112 ;
+      rdfs:comment "指治疗疾病使用的药物方案。" ;
+      rdfs:label "药物治疗方案" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T114
+:T114 rdf:type owl:Class ;
+      rdfs:subClassOf :T112 ;
+      rdfs:comment "指疾治疗病使用的操作方案。" ;
+      rdfs:label "操作治疗方案" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T115
+:T115 rdf:type owl:Class ;
+      rdfs:subClassOf :T112 ;
+      rdfs:comment "指疾病诊断的标准和逻辑。" ;
+      rdfs:label "诊断方案" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T120
+:T120 rdf:type owl:Class ;
+      rdfs:comment "# 推荐指南中存在的临床问题" ;
+      rdfs:label "临床问题" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#T121
+:T121 rdf:type owl:Class ;
+      rdfs:comment "推荐指南的临床问题所对应的推荐意见" ;
+      rdfs:label "推荐意见" .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:comment "一切事物的基类，最通用的项目类型。" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000001
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000001> rdf:type owl:NamedIndividual ,
+                                                                                             :T121 ;
+                                                                                    :R080 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000003> ;
+                                                                                    :R325 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000004> ;
+                                                                                    rdfs:comment "临床问题1的第一条推荐意见" ;
+                                                                                    rdfs:label "推荐意见1-1" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000002
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000002> rdf:type owl:NamedIndividual ,
+                                                                                             :T120 ;
+                                                                                    :R080 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000003> ;
+                                                                                    :R324 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000001> ;
+                                                                                    rdfs:comment "NMIBC患者行TURBT的适应症？" ;
+                                                                                    rdfs:label "临床问题1" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000003
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000003> rdf:type owl:NamedIndividual ,
+                                                                                             :T099 ;
+                                                                                    rdfs:comment "NMIBC的患者" ;
+                                                                                    rdfs:label "NMIBC患者" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000004
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000004> rdf:type owl:NamedIndividual ,
+                                                                                             :T114 ;
+                                                                                    rdfs:label "TURBT1" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000005
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000005> rdf:type owl:NamedIndividual ,
+                                                                                             :T120 ;
+                                                                                    :R080 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000003> ;
+                                                                                    :R324 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000007> ;
+                                                                                    rdfs:comment "NMIBC患者首次TURBT切除的范围？" ;
+                                                                                    rdfs:label "临床问题3" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000007
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000007> rdf:type owl:NamedIndividual ,
+                                                                                             :T121 ;
+                                                                                    :R080 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000003> ;
+                                                                                    :R325 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000008> ;
+                                                                                    rdfs:label "推荐意见3-1" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000008
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000008> rdf:type owl:NamedIndividual ,
+                                                                                             :T114 ;
+                                                                                    :R247 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000015> ;
+                                                                                    :R264 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000009> ,
+                                                                                          <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000012> ;
+                                                                                    :R327 "首次" ;
+                                                                                    rdfs:label "TURBT3" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000009
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000009> rdf:type owl:NamedIndividual ,
+                                                                                             :T002 ;
+                                                                                    :R015 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000010> ;
+                                                                                    :R0000001 "深达基层切除" ;
+                                                                                    rdfs:label "切除3-1" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000010
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000010> rdf:type owl:NamedIndividual ,
+                                                                                             :T036 ;
+                                                                                    :R0000001 "内镜可见" ;
+                                                                                    rdfs:label "内镜可见肿瘤" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000011
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000011> rdf:type owl:NamedIndividual ,
+                                                                                             :T036 ;
+                                                                                    :R0000001 "1cm" ;
+                                                                                    rdfs:label "1cm肿瘤" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000012
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000012> rdf:type owl:NamedIndividual ,
+                                                                                             :T002 ;
+                                                                                    :R015 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000011> ,
+                                                                                          <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000014> ;
+                                                                                    :R141 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000013> ;
+                                                                                    rdfs:label "切除3-2" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000013
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000013> rdf:type owl:NamedIndividual ,
+                                                                                             :T084 ;
+                                                                                    rdfs:label "病理性诊断" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000014
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000014> rdf:type owl:NamedIndividual ,
+                                                                                             :T010 ;
+                                                                                    rdfs:label "基地部分膀胱壁" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000015
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000015> rdf:type owl:NamedIndividual ,
+                                                                                             :T065 ;
+                                                                                    :R028 <http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000016> ;
+                                                                                    rdfs:label "病理送检" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000016
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000016> rdf:type owl:NamedIndividual ,
+                                                                                             :T010 ;
+                                                                                    rdfs:label "肌层组织" .
+
+
+###  http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000017
+<http://www.semanticweb.org/gaokuang/ontologies/2021/9/untitled-ontology-11#000017> rdf:type owl:NamedIndividual ,
+                                                                                             :T120 ;
+                                                                                    rdfs:comment "NMIBC患者不宜优先选用TURBT的指征？" ;
+                                                                                    rdfs:label "临床问题2" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:R001 rdfs:comment "表示源概念是目标概念的一个子类型，如“呼吸系统疾病”是“疾病”的子类。" .
+
+
+:R017 rdfs:label "使用的器械" ;
+      rdfs:comment "表示被用来执行某种医疗操作时采用的设备或工具，且是此操作关注的重点设备，如“食管扩张术”使用的器械是“探条”。" .
+
+
+:R018 rdfs:comment "表示用来接近操作部位的设备或工具，如“腹腔镜下膀胱周围粘连松解术”使用的通路器械是“腹腔镜”。" ;
+      rdfs:label "使用的通路器械" .
+
+
+:R019 rdfs:comment "表示在医疗操作过程中关注的植入性、介入性医疗器械，如“全膝人工关节置换联合截骨术”的植介入医疗器械是“人工膝关节”。" ;
+      rdfs:label "植介入器械" .
+
+
+:R033 rdfs:label "有效成分" ;
+      rdfs:comment "表示药品中对生物体代谢或者化学反应起作用的成分，如“穿心莲片”的有效成分是“穿心莲”。" .
+
+
+:R054 rdfs:label "规格成分" ;
+      rdfs:comment "表示说明药品规格时针对的成分，如“注射用培美曲塞二钠50mg（以培美曲塞计）”的规格成分是“培美曲塞”。" .
+
+
+:R062 rdfs:comment "指实体是目标概念的一个实例，如“张三”是“人”的实例。" .
+
+
+:R069 rdfs:label "标识符" ;
+      rdfs:comment "指事物的唯一标识，如URI（统一资源标识符）、URL（统一资源定位符）、DOI（数字对象标识符）、ISBN（国际标准书号）、ISSN（国际标准刊号）等。" .
+
+
+:R072 rdfs:comment "指事物在OMAHA七巧板术语集中的概念ID标识符。" ;
+      rdfs:label "OMAHA概念ID" .
+
+
+:R088 rdfs:comment "指患者得了某种疾病后身体发生的一系列异常变化。" ;
+      rdfs:label "临床表现" .
+
+
+:R097 rdfs:comment "指用于临床所见的一切有治疗或预防作用的物质，使病情好转或痊愈。" ;
+      rdfs:label "治疗药物" .
+
+
+:R098 rdfs:comment "指在临床上最常用、首先选择或标准选择的药物，一般经临床长期应用证明安全且有效。" ;
+      rdfs:label "一线用药" .
+
+
+:R099 rdfs:label "二线用药" ;
+      rdfs:comment "指在临床使用频率没有一线药高或者效果没有一线药明显，以及不良反应较多的药物，在疗效、安全性、耐药性、药品价格等某方面存在局限性。" .
+
+
+:R100 rdfs:label "三线用药" ;
+      rdfs:comment "指在临床使用时不良反应明显，不宜随意或使用时需要倍加保护以免耐药性，其疗效或安全性任何一方面的临床资料尚较少，或并不优于一线或二线药。" .
+
+
+:R102 rdfs:label "预防措施" ;
+      rdfs:comment "指为消除潜在不合格或其他潜在不期望情况的原因所采取的措施。" .
+
+
+:R103 rdfs:comment "指在问题尚没有发生前便采取措施，减少病因或致病因素，防止或减少心理障碍的发生。一级预防也称初级预防，初级预防是真正的预防，是最积极、最主动的预防。" ;
+      rdfs:label "一级预防" .
+
+
+:R104 rdfs:label "二级预防" ;
+      rdfs:comment "指在临床所见的潜伏期（亚临床期）为了阻止或延缓病情发展而采取的措施，又称三早预防，包括早期发现、早期诊断、早期治疗。" .
+
+
+:R108 rdfs:comment "指药品制造中所使用的任何一种物质或物质的混合物。" ;
+      rdfs:label "药物成分" .
+
+
+:R117 rdfs:label "配伍禁忌" ;
+      rdfs:comment "指药物在体外配伍直接发生物理性或化学性的相互作用而影响药物疗效或引起毒性反应的现象。" .
+
+
+:R118 rdfs:comment "指药物在体外配伍直接发生化学性的相互作用而影响药物疗效或引起毒性反应的现象。" ;
+      rdfs:label "化学配伍禁忌" .
+
+
+:R119 rdfs:label "物理配伍禁忌" ;
+      rdfs:comment "指药物在体外配伍直接发生物理性的相互作用而影响药物疗效或引起毒性反应的现象。" .
+
+
+:R138 rdfs:comment "指按正常使用操作或药物进行预防、诊断或治疗疾病过程中，发生与治疗目的无关的有害反应。" ;
+      rdfs:label "不良反应" .
+
+
+:R229 rdfs:comment "指该药物常见的不良反应。" ;
+      rdfs:label "常见不良反应" .
+
+
+:R230 rdfs:label "少见不良反应" ;
+      rdfs:comment "指该药物较少见的不良反应。" .
+
+
+:R231 rdfs:label "过敏反应" ;
+      rdfs:comment "指该药物易引发的过敏反应。" .
+
+
+:R236 rdfs:comment "指临床所见所适用的治疗方法，如放疗、化疗、手术等。" ;
+      rdfs:label "治疗方式" .
+
+
+:R242 rdfs:comment "指临床所见在相关治疗前或手术术前需要做的检查项目，包括治疗前必需检查和备选检查。" ;
+      rdfs:label "治疗前检查" .
+
+
+:R243 rdfs:comment "指临床所见在相关治疗前或手术术前必需要做的检查项目。" ;
+      rdfs:label "治疗前必需检查" .
+
+
+:R244 rdfs:label "治疗前备选检查" ;
+      rdfs:comment "指临床所见在相关治疗前或手术术前根据情况来确定是否需要做的检查项目。" .
+
+
+:R245 rdfs:label "治疗后复查" ;
+      rdfs:comment "指临床所见在相关治疗后或手术术后需要复查的检查项目，包括术后必需检查和备选检查。" .
+
+
+:R246 rdfs:comment "指临床所见在相关治疗后或手术术后必需要复查的检查项目。" ;
+      rdfs:label "治疗后必需检查" .
+
+
+:R247 rdfs:label "治疗后备选检查" ;
+      rdfs:comment "指临床所见在相关治疗后或手术术后根据情况来确定是否需要复查的检查项目。" .
+
+
+:R257 rdfs:label "住院/门诊期间备选检查" ;
+      rdfs:comment "指临床所见在住院或者门诊诊疗期间根据情况来确定是否需要做的检查项目。" .
+
+
+:R258 rdfs:label "住院/门诊期间必需检查" ;
+      rdfs:comment "指临床所见在住院或者门诊诊疗期间必需要做的检查项目。" .
+
+
+:R259 rdfs:comment "指临床所见在住院或者门诊诊疗期间需要做的检查项目，包括必需检查项目和备选检查项目。" ;
+      rdfs:label "住院/门诊期间相关检查" .
+
+
+:R260 rdfs:comment "指临床所见在住院或者门诊诊疗之后根据情况来确定是否需要做的检查项目。" ;
+      rdfs:label "入院/门诊后备选复查" .
+
+
+:R261 rdfs:label "入院/门诊后必需复查" ;
+      rdfs:comment "指临床所见在住院或者门诊诊疗之后必需要做的检查项目。" .
+
+
+:R262 rdfs:comment "指临床所见在住院或者门诊诊疗之后需要做的检查项目，包括必需检查项目和备选检查项目。" ;
+      rdfs:label "入院/门诊后复查" .
+
+
+:R274 rdfs:label "症状" ;
+      rdfs:comment "指该疾病患者主观感受到不适或痛苦的异常感觉活某些客观病态改变。" .
+
+
+:R275 rdfs:comment "指该疾病患者常见的主观感受到不适或痛苦的异常感觉活某些客观病态改变。" ;
+      rdfs:label "常见症状" .
+
+
+:R276 rdfs:comment "指该疾病患者少见的主观感受到不适或痛苦的异常感觉活某些客观病态改变。" ;
+      rdfs:label "少见症状" .
+
+
+:R277 rdfs:comment "指医生客观检查到的该病患者身体方面的异常改变。" ;
+      rdfs:label "体征" .
+
+
+:R278 rdfs:label "常见体征" ;
+      rdfs:comment "指医生客观检查到的该病患者常见的身体方面的异常改变。" .
+
+
+:R279 rdfs:comment "指医生客观检查到的该病患者少见的身体方面的异常改变。" ;
+      rdfs:label "少见体征" .
+
+
+:R287 rdfs:comment "指在临床上最常用、首先选择或标准选择的治疗方式，一般经临床长期应用证明安全且有效。" ;
+      rdfs:label "一线治疗" .
+
+
+:R289 rdfs:comment "指治疗该疾病需要做的相关检查和操作。" ;
+      rdfs:label "治疗相关检查" .
+
+
+:R291 rdfs:label "实验室检查" ;
+      rdfs:comment "指为诊断或治疗该疾病所需要做的实验室检查。" .
+
+
+:R296 rdfs:label "病原学检查" ;
+      rdfs:comment "指使用各种方法检测人体内细菌、病毒、真菌以及寄生虫的感染情况。" .
+
+
+:R297 rdfs:label "血清学检查" ;
+      rdfs:comment "指通过免疫手段，对血清中各种抗体或物质浓度进行检查操作。" .
+
+
+:R300 rdfs:label "早期预警指标" ;
+      rdfs:comment "指疾病早期需要监测的指标，以减少疾病进一步加重或恶化。" .
+
+
+:R303 rdfs:comment "指疾病所必需的基础治疗的操作。" ;
+      rdfs:label "一般治疗" .
+
+
+:R305 rdfs:label "抗病毒治疗" ;
+      rdfs:comment "指通过药物制剂来抑制病毒复制，并最终清除病毒，能够控制病情进展的一类治疗方案。" .
+
+
+:R306 rdfs:label "免疫治疗" ;
+      rdfs:comment "是指针对机体低下或亢进的免疫状态，人为地增强或抑制机体的免疫功能以达到治疗疾病目的的治疗方法。" .
+
+
+:R314 rdfs:comment "指疾病病程中需要监测的指标，以减少疾病进一步加重或恶化。" ;
+      rdfs:label "临床预警指标" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
